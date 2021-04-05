@@ -32,23 +32,20 @@ public class SortingAlgorithmsTest {
     }
 
     @Test
+    // Time complexity is O(N^2)
     public void sortByInsert() throws Exception {
         System.out.println("SORTING BY INSERTING  ###########");
         System.out.println("Array to sort array is " + Arrays.toString(arrayToSort));
 
-        int element;
-        int indexToInsert;
-
-        for(int i = 0; i < arrayToSort.length ; i++){
-            element = arrayToSort[i];
-            indexToInsert = i;
-            while(indexToInsert > 0 && arrayToSort[indexToInsert-1] > element){
-                arrayToSort[indexToInsert] = arrayToSort[--indexToInsert];
-                arrayToSort[indexToInsert] = element;
-
+        for(int i = 1; i < arrayToSort.length ; i++){
+            int element = arrayToSort[i];
+            int indexToInsert = i - 1;
+            while(indexToInsert >= 0 && arrayToSort[indexToInsert] > element){
+                arrayToSort[indexToInsert + 1] = arrayToSort[indexToInsert];
+                indexToInsert--;
                 iterationsNumber++;
             }
-
+            arrayToSort[indexToInsert + 1] = element;
         }
 
         System.out.println("Result array is " + Arrays.toString(arrayToSort));
