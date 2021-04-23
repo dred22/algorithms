@@ -47,29 +47,7 @@ public class MergeSortRecursiveTest {
     }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// just une simple exercise
     @Test
     public void mergeTwoSerted(){
         System.out.println("SORT BY MERGING  ###########");
@@ -94,48 +72,5 @@ public class MergeSortRecursiveTest {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-/*    private void mergeSort2(int[] arrToSplit, int start, int end, String side) {
-        if (start >= end) {
-            return;
-        }
-        var arr = Arrays.copyOfRange(arrToSplit, start, end +1 );
-        System.out.println(side + " is " + Arrays.toString(arr));
-        var middle = (start + end) / 2;
-        mergeSort(arrToSplit, start, middle, "left");
-        mergeSort(arrToSplit, middle + 1, end, "right");
-        merge(arrToSplit, start, middle, end);
-        var arr2 = Arrays.copyOfRange(arrToSplit, start, end +1 );
-        System.out.println(side + " after merge is " + Arrays.toString(arr2));
-    }
-
-
-    private void merge2(int[] arr, int first, int middle, int end){
-        int[] arr1 = Arrays.copyOfRange(arr, first, middle + 1 );
-        int[] arr2 = Arrays.copyOfRange(arr, middle + 1, end + 1);
-
-        int index1 = 0;
-        int index2 = 0;
-        int count = arr1.length + arr2.length + first;
-
-        for(var indexResult = first; indexResult < count; indexResult++){
-            if (index1 < arr1.length && (index2 >= arr2.length || arr1[index1] <= arr2[index2])){
-                arr[indexResult] = arr1[index1++];
-            } else {
-                arr[indexResult] = arr2[index2++];
-            }
-        }
-
-    }*/
 
 }
